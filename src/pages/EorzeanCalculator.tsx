@@ -4,6 +4,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import TotalTimeCalculator from '../components/TotalTimeCalculator';
 import TimeDifferenceCalculator from '../components/TimeDifferenceCalculator';
+import ResponsiveAppBar from '../components/Appbar/Appbar';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,25 +51,27 @@ const EorzeanCalculator = () => {
 
     
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <Container>
+      <ResponsiveAppBar />
       
-      <Box mt={'20px'}>
-        <Container maxWidth={false} sx={{ maxWidth: "1880px" }}>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="Total Time Calculation" {...a11yProps(0)} />
-              <Tab label="Time Difference Calculation" {...a11yProps(1)} />
-            </Tabs>
-          </Box>
-          <TabPanel value={value} index={0}>
-            <TotalTimeCalculator  />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <TimeDifferenceCalculator />
-          </TabPanel>
-        </Container>
-      </Box>
-    </LocalizationProvider>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+
+        <Box mt={'20px'}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tab label="Total Time Calculation" {...a11yProps(0)} />
+                <Tab label="Time Difference Calculation" {...a11yProps(1)} />
+              </Tabs>
+            </Box>
+            <TabPanel value={value} index={0}>
+              <TotalTimeCalculator  />
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <TimeDifferenceCalculator />
+            </TabPanel>
+        </Box>
+      </LocalizationProvider>
+    </Container>
   );
 }
 
