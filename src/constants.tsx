@@ -1,0 +1,1 @@
+export const TimeConstant = 35/12;
