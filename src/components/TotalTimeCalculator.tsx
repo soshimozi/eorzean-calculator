@@ -2,9 +2,9 @@ import { Box, Button, SxProps, Theme, Typography } from "@mui/material";
 import { TimeField } from "@mui/x-date-pickers";
 import { Dayjs } from "dayjs";
 import { useState } from "react";
-import { TimeConstant } from "./constants";
+import { TimeConstant } from "../constants";
 
-import { formatResult } from './DateHelpers';
+import { formatResult } from '../DateHelpers';
 
 const TotalTimeCalculator : React.FC<{
 	sx?: SxProps<Theme> | undefined;
