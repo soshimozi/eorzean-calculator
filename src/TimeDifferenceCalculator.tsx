@@ -43,7 +43,7 @@ const TimeDifferenceCalculator : React.FC<{
     }
 
     return (
-        <Box sx={{... sx}}>
+        <Box sx={{...sx}}>
                 <Box sx={{verticalAlign: "middle"}}>
                 <TimeField
                     label="Enter Start Time"
