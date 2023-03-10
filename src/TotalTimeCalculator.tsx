@@ -1,6 +1,6 @@
 import { Box, Button, SxProps, Theme, Typography } from "@mui/material";
 import { TimeField } from "@mui/x-date-pickers";
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
 import { useState } from "react";
 import { TimeConstant } from "./constants";
 
